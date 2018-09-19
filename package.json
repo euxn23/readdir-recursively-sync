@@ -1,11 +1,14 @@
 {
   "name": "readdir-recursively-sync",
-  "version": "0.2.0",
+  "version": "1.0.3",
   "description": "A simple, zero-dependency readdir-recursively module.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "fmt": "prettier --write index.js",
-    "test": "prettier --list-different index.js"
+    "fmt": "prettier --write src/index.ts",
+    "tsc": "tsc",
+    "test": "prettier --list-different src/index.ts",
+    "prepare": "tsc"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,10 @@
     "url": "https://github.com/euxn23/readdir-recursively-sync/issues"
   },
   "devDependencies": {
+    "@types/node": "^10.10.1",
     "prettier": "^1.12.1",
-    "prettier-cli": "^0.1.0"
+    "prettier-cli": "^0.1.0",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3"
   }
 }
